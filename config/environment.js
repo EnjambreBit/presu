@@ -4,8 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'presu',
     environment: environment,
-    baseURL: '/',
-    locationType: 'auto',
+    baseURL: '/presu',
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
