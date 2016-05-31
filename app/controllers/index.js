@@ -7,6 +7,7 @@ export default Ember.Controller.extend({
 		var canthoras = this.get('canthoras');
 		var ganancia = this.get('ganancia');
 		var iva = this.get('iva');
+		var total = '';
 		
 		
 		if (isNaN(valhora)) { valhora = 0; }
@@ -26,9 +27,9 @@ export default Ember.Controller.extend({
 		
 		// Si se aplica IVA
 		if (iva===true) {
-			var total = subtotal2 * 1.21;
+			total = subtotal2 * 1.21;
 		} else {
-			var total = subtotal2;
+			total = subtotal2;
 		}
 
 		this.set('total', total);
