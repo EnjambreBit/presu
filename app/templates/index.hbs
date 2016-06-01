@@ -1,3 +1,10 @@
+{{#each model as |presupuesto|}}
+  <li>{{presupuesto.titulo}}</li>
+{{/each}}
+
+
+
+<hr/>
 <p>Valor de la hora: $ {{input value=valhora size=3}}</p>
 <p>Cantidad de horas: $ {{input value=canthoras size=3}}</p>
 
@@ -8,7 +15,7 @@
 {{/if}}
 
 <h4>Costos</h4>
-<p>Ganancia: {{input value=ganancia size=3}} % 
+<p>Ganancia: {{input value=ganancia size=3}} %
 	{{#if importe_ganancia}}
 		<b><i>({{format-currency importe_ganancia}})</i></b>
 	{{/if}}
@@ -22,4 +29,3 @@
 {{ else }}
 	<p><b>Total + Impuestos: </b> {{format-currency 0}}</p>
 {{/if}}
-
