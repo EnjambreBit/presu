@@ -1,7 +1,7 @@
 /*jshint node:true*/
 module.exports = {
   "framework": "qunit",
-  "test_page": "presu/tests/index.html?hidepassed",
+  "test_page": "/presu/tests/index.html?hidepassed",
   "disable_watching": true,
   "launch_in_ci": [
     "PhantomJS"
