@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'presu',
     environment: environment,
-    baseURL: '/',
+    baseURL: '/presu',
     locationType: 'hash',
 
     EmberENV: {
@@ -31,6 +31,7 @@ module.exports = function(environment) {
   if (environment === 'test') {
     // Testem prefers this...
     ENV.locationType = 'none';
+    ENV.baseURL = '/';
 
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;
