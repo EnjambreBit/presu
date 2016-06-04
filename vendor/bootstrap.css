@@ -1,4 +1,5 @@
 /* @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700"); */
+
 /*!
  * bootswatch v3.3.6
  * Homepage: http://bootswatch.com
@@ -6838,7 +6839,6 @@ button.close {
   border: 1px solid #ac6819;
 }
 body {
-  font-weight: 200;
 }
 th {
   color: #444444;
