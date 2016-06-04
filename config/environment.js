@@ -4,8 +4,9 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'presu',
     environment: environment,
-    baseURL: '/presu',
+    baseURL: '/',
     locationType: 'hash',
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -30,7 +31,6 @@ module.exports = function(environment) {
   if (environment === 'test') {
     // Testem prefers this...
     ENV.locationType = 'none';
-    ENV.baseURL =  '/';
 
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;

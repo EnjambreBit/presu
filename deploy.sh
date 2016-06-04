@@ -12,9 +12,10 @@ fi
 # clear and re-create the out directory
 rm -rf out || exit 0;
 mkdir out;
+mkdir out/presu;
 
 ember build
-cp -r dist/* out/
+cp -r dist/* out/presu/
 
 # go to the out directory and create a *new* Git repo
 cd out
