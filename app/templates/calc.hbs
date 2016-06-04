@@ -1,24 +1,29 @@
-<p>Valor de la hora: $ {{input value=valhora size=3}}</p>
-<p>Cantidad de horas: $ {{input value=canthoras size=3}}</p>
+<div class="container">
+  <h2>Calculadora</h2>
+  
+  <p>Valor de la hora: $ {{input value=valhora size=3}}</p>
+  <p>Cantidad de horas: $ {{input value=canthoras size=3}}</p>
 
-{{#if subtotal1}}
-	<p><b>Subtotal:</b> {{format-currency subtotal1}}</p>
-{{else}}
-	<p><b>Subtotal:</b> {{format-currency 0}}</p>
-{{/if}}
+  {{#if subtotal1}}
+  	<p><b>Subtotal:</b> {{format-currency subtotal1}}</p>
+  {{else}}
+  	<p><b>Subtotal:</b> {{format-currency 0}}</p>
+  {{/if}}
 
-<h4>Costos</h4>
-<p>Ganancia: {{input value=ganancia size=3}} %
-	{{#if importe_ganancia}}
-		<b><i>({{format-currency importe_ganancia}})</i></b>
-	{{/if}}
-</p>
+  <h4>Costos</h4>
+  <p>Ganancia: {{input value=ganancia size=3}} %
+  	{{#if importe_ganancia}}
+  		<b><i>({{format-currency importe_ganancia}})</i></b>
+  	{{/if}}
+  </p>
 
-<h4>Impuestos</h4>
-<p>IVA 21% {{input type="checkbox" checked=iva }}</p>
+  <h4>Impuestos</h4>
+  <p>IVA 21% {{input type="checkbox" checked=iva }}</p>
 
-{{#if total}}
-	<p><b>Total + Impuestos: </b> {{format-currency total}}</p>
-{{ else }}
-	<p><b>Total + Impuestos: </b> {{format-currency 0}}</p>
-{{/if}}
+  {{#if total}}
+  	<p><b>Total + Impuestos: </b> {{format-currency total}}</p>
+  {{ else }}
+  	<p><b>Total + Impuestos: </b> {{format-currency 0}}</p>
+  {{/if}}
+
+</div>

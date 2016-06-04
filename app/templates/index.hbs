@@ -2,12 +2,25 @@
 <div class="container">
   <h2>Presupuestos</h2>
 
-  <div disabled class="padding-vertical">
-    <button class='btn btn-danger btn-sm'>{{fa-icon "plus"}} Crear un presupuesto</button>
+  <div class="padding-vertical">
+    <button disabled class='btn btn-danger btn-sm'>{{fa-icon "plus"}} Crear un presupuesto</button>
   </div>
 
-  {{#each model as |presupuesto|}}
-    <li>{{presupuesto.titulo}}</li>
-  {{/each}}
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Título del presupuesto</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {{#each model as |presupuesto|}}
+        <tr>
+          <td>{{presupuesto.titulo}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+
+  </table>
 
 </div>
