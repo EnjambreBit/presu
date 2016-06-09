@@ -8,6 +8,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('about');
   this.route('calc');
+  this.route('presupuesto', { path: '/presupuesto/:id'});
 });
 
 export default Router;

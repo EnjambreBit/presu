@@ -1,0 +1,29 @@
+<div class="container">
+	<h2>Presupuesto: </h2>
+	<h3>{{model.titulo}}</h3>
+	<h4>Cliente: {{model.cliente}}</h4>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>Concepto</th>
+				<th>Horas</th>
+				<th>Precio Unitario</th>
+				<th>Tipo</th>
+				<th>Subtotal</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			{{#each model.items as |item|}}
+				<tr>
+					<td>{{item.concepto}}</td>
+					<td>{{item.horas}}</td>
+					<td>{{format-currency item.tipo.precioPorHora}}</td>
+					<td>{{item.tipo.descripcion}}</td>
+					<td>{{format-currency subtotal}}</td>
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</div>
+{{outlet}}
