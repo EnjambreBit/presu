@@ -1,19 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  //count: Ember.computed('items.@each', function() {
-    //return this.get('items').length;
-  //}),
-  todos: [
-    Ember.Object.create({ isDone: true }),
-    Ember.Object.create({ isDone: false }),
-    Ember.Object.create({ isDone: true })
-  ],
-  subtotal: Ember.computed('todos.@each.isDone', function() {
-    let subtotal = 0;
-    var items = this.get('todos');
+  precioTotal: Ember.computed('model.items.@each.subtotal', function() {
+    let total = 0;
+    let items = this.get("model.items");
 
-    console.log("items: " + items);
-    return subtotal;
+    items.forEach((item) => {
+      total += item.get("subtotal");
+    });
+
+    return total;
   }),
 });

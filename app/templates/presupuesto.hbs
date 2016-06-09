@@ -20,10 +20,12 @@
 					<td>{{item.horas}}</td>
 					<td>{{format-currency item.tipo.precioPorHora}}</td>
 					<td>{{item.tipo.descripcion}}</td>
-					<td>{{format-currency subtotal}}</td>
+					<td>{{format-money item.subtotal}}</td>
 				</tr>
 			{{/each}}
 		</tbody>
 	</table>
+
+  <p>Total: <code>{{format-money precioTotal}}</code></p>
 </div>
 {{outlet}}

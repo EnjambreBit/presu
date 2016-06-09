@@ -1,7 +1,7 @@
 import Model from 'ember-data/model';
 import attr from 'ember-data/attr';
 import { belongsTo } from 'ember-data/relationships';
-
+import Ember from 'ember';
 
 export default Model.extend({
   concepto: attr('string'),
@@ -15,5 +15,9 @@ export default Model.extend({
   valor: attr('number'),
 
   presupuesto: belongsTo('presupuesto'),
-  tipo: belongsTo('tipo')
+  tipo: belongsTo('tipo'),
+
+  subtotal: Ember.computed("horas", "tipo.precioPorHora", function() {
+    return this.get("tipo.precioPorHora") * this.get("horas");
+  })
 });
