@@ -1,0 +1,28 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.navbar-brand {
+  padding-top: 11px;
+}
+
+p {
+  font-size: initial;
+}
+
+.navbar li.active {
+  border-bottom: 2px solid #d9230f;
+}
+
+.navbar li {
+  border-top: 2px solid white;
+}
+
+.padding {
+  padding: 1em;
+}
+
+.padding-vertical {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
