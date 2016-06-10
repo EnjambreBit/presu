@@ -2,7 +2,7 @@
 	<h2>Presupuesto: </h2>
 	<h3>{{model.titulo}}</h3>
 	<h4>Cliente: {{model.cliente}}</h4>
-	<table class="table table-bordered">
+	<table class="table table-bordered table-condensed">
 		<thead>
 			<tr>
 				<th>Concepto</th>
@@ -23,9 +23,28 @@
 					<td>{{format-money item.subtotal}}</td>
 				</tr>
 			{{/each}}
+			<tr><td colspan="5"></td></tr>
+			<tr>
+				<td colspan="4">Subtotal Costos</td>
+				<td><code>{{format-money precioTotal}}</code></td>
+			</tr>
+			<tr><td colspan="5"></td></tr>
+			<tr>
+				<td colspan="5">Ganancia {{input value=ganancia size=3}} % <i>({{format-money importe_ganancia}})</i></td>
+			</tr>
+			<tr>
+				<td colspan="4">Subtotal Neto</td>
+				<td><code>{{format-money precioMasGanancia}}</code></td>
+			</tr>
+			<tr>
+				<td colspan="5">IVA 21% {{input type="checkbox" checked=iva }} <i>({{format-money importe_iva}})</i></td>
+			</tr>
+			<tr><td colspan="5"></td></tr>
+			<tr>
+				<td colspan="4">Total</td>
+				<td><code>{{format-money precioFinal}}</code></td>
+			</tr>
 		</tbody>
 	</table>
-
-  <p>Total: <code>{{format-money precioTotal}}</code></p>
 </div>
 {{outlet}}
