@@ -6,5 +6,5 @@ export default Model.extend({
   descripcion: attr('string'),
   precioPorHora: attr('number'),
 
-  item: belongsTo('item')
+  item: belongsTo('item', {async: true})
 });

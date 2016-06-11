@@ -14,8 +14,8 @@ export default Model.extend({
   extra: attr('string'),
   valor: attr('number'),
 
-  presupuesto: belongsTo('presupuesto'),
-  tipo: belongsTo('tipo'),
+  presupuesto: belongsTo('presupuesto', {async: true}),
+  tipo: belongsTo('tipo', {async: true}),
 
   subtotal: Ember.computed("horas", "tipo.precioPorHora", function() {
     return this.get("tipo.precioPorHora") * this.get("horas");

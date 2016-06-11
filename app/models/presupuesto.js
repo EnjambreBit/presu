@@ -8,5 +8,5 @@ export default Model.extend({
   cliente: attr('string'),
   ganancia: attr('string'),
 
-  items: hasMany('item'),
+  items: hasMany('item', {async: true}),
 });
